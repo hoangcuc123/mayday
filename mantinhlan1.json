@@ -1,0 +1,416 @@
+{
+    "title": "BỆNH ÁN CẤP TÍNH",
+    "sections": [
+        {
+            "section_title": "Thông tin cơ bản của bệnh nhân",
+            "fields": [
+                {
+                    "key": "fullName",
+                    "label": "Họ và tên của bệnh nhân",
+                    "required": true
+                },
+                {
+                    "key": "nationalId",
+                    "label": "Số căn cước công dân của bệnh nhân",
+                    "required": true
+                },
+                {
+                    "key": "age",
+                    "label": "Tuổi của bệnh nhân; nếu dưới 6 tuổi thì ghi theo tháng",
+                    "required": false
+                },
+                {
+                    "key": "gender",
+                    "label": "Giới tính của bệnh nhân (0: Nam, 1: Nữ)",
+                    "required": false
+                },
+                {
+                    "key": "phoneNumber",
+                    "label": "Số điện thoại của bệnh nhân",
+                    "required": true
+                },
+                {
+                    "key": "addressArea",
+                    "label": "Khu vực sinh sống: Thành thị, Nông thôn, Miền biển, Vùng núi",
+                    "required": false
+                },
+                {
+                    "key": "occupation",
+                    "label": "Nghề nghiệp: Công nhân, Nông dân, HS-SV, Cán bộ công chức, Khác",
+                    "required": true
+                },
+                {
+                    "key": "exposureHistory",
+                    "label": "Tiền sử tiếp xúc: Hóa chất, Ánh sáng, Bụi, Khác, Không",
+                    "required": true
+                },
+                {
+                    "key": "recordOpenDate",
+                    "label": "Ngày mở hồ sơ bệnh án",
+                    "required": false
+                },
+                {
+                    "key": "examinationDate",
+                    "label": "Ngày khám bệnh",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "section_title": "Bệnh án cấp tính – phần chung",
+            "fields": [
+                {
+                    "key": "continuousOutbreak6Weeks",
+                    "label": "Đã từng bị mày đay liên tục ≥ 6 tuần (≥ 2 lần/tuần)",
+                    "required": true
+                },
+                {
+                    "key": "rashOrAngioedema",
+                    "label": "Loại tổn thương: Sẩn phù, Phù mạch hoặc cả hai",
+                    "required": false
+                },
+                {
+                    "key": "firstOutbreakSinceWeeks",
+                    "label": "Lần đầu bị tổn thương cách đây bao nhiêu tuần",
+                    "required": false
+                },
+                {
+                    "key": "outbreakStartMonthYear",
+                    "label": "Thời gian bắt đầu đợt (tháng/năm)",
+                    "required": {
+                        "month": false,
+                        "year": true
+                    }
+                },
+                {
+                    "key": "outbreakEndMonthYear",
+                    "label": "Thời gian kết thúc đợt (tháng/năm)",
+                    "required": {
+                        "month": false,
+                        "year": true
+                    }
+                },
+                {
+                    "key": "treatmentReceived",
+                    "label": "Có điều trị trong đợt hay không",
+                    "required": false
+                },
+                {
+                    "key": "drugResponse",
+                    "label": "Đáp ứng điều trị: Khỏi hoàn toàn, Không khỏi, Giảm, Nặng lên",
+                    "required": false
+                },
+                {
+                    "key": "drugResponseSymptom",
+                    "label": "Triệu chứng giảm/nặng lên: Nốt đỏ, Ngứa, Cả hai",
+                    "required": false
+                },
+                {
+                    "key": "currentOutbreakStart",
+                    "label": "Thời gian bắt đầu đợt hiện tại",
+                    "required": true
+                },
+                {
+                    "key": "currentOutbreakEnd",
+                    "label": "Thời gian kết thúc đợt hiện tại",
+                    "required": true
+                },
+                {
+                    "key": "drugName",
+                    "label": "Tên thuốc đã sử dụng",
+                    "required": false
+                },
+                {
+                    "key": "drugDuration",
+                    "label": "Thời gian sử dụng thuốc",
+                    "required": false
+                },
+                {
+                    "key": "drugDosage",
+                    "label": "Liều dùng thuốc",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "section_title": "Sẩn phù",
+            "fields": [
+                {
+                    "key": "rashAppearanceTime",
+                    "label": "Nốt đỏ xuất hiện ngẫu nhiên hoặc khi có yếu tố kích thích",
+                    "required": false
+                },
+                {
+                    "key": "rashTriggerFactors",
+                    "label": "Các yếu tố kích thích: Gãi/chà xát, ra mồ hôi, lạnh + nhiệt lượng tăng, tiếp xúc ánh sáng, rung, chất cụ thể...",
+                    "required": false
+                },
+                {
+                    "key": "rashWorseningFactors",
+                    "label": "Yếu tố làm nặng bệnh: Stress, Thức ăn, Thuốc chống viêm/giảm đau",
+                    "required": false
+                },
+                {
+                    "key": "rashFoodTriggerDetail",
+                    "label": "Chi tiết thức ăn gây nặng bệnh",
+                    "required": false
+                },
+                {
+                    "key": "rashDrugTriggerDetail",
+                    "label": "Chi tiết thuốc gây nặng bệnh",
+                    "required": false
+                },
+                {
+                    "key": "rashLocation",
+                    "label": "Vị trí nốt đỏ",
+                    "required": false
+                },
+                {
+                    "key": "rashPhotoUpload",
+                    "label": "Ảnh vị trí nốt đỏ",
+                    "required": false
+                },
+                {
+                    "key": "rashSizeOnTreatment",
+                    "label": "Kích thước nốt đỏ khi dùng thuốc",
+                    "required": false
+                },
+                {
+                    "key": "rashSizeNoTreatment",
+                    "label": "Kích thước nốt đỏ khi không dùng thuốc",
+                    "required": false
+                },
+                {
+                    "key": "rashBorder",
+                    "label": "Ranh giới nốt đỏ: Có bờ, Không bờ",
+                    "required": false
+                },
+                {
+                    "key": "rashShape",
+                    "label": "Hình dạng: Tròn/Oval, Dài, Hình khác",
+                    "required": false
+                },
+                {
+                    "key": "rashColor",
+                    "label": "Màu sắc: Trùng màu da, Đỏ hồng, Trắng, Xuất huyết, Có quầng trắng",
+                    "required": false
+                },
+                {
+                    "key": "rashDurationOnTreatment",
+                    "label": "Thời gian tồn tại khi dùng thuốc",
+                    "required": false
+                },
+                {
+                    "key": "rashDurationNoTreatment",
+                    "label": "Thời gian tồn tại khi không dùng thuốc",
+                    "required": false
+                },
+                {
+                    "key": "rashSurface",
+                    "label": "Đặc điểm bề mặt",
+                    "required": false
+                },
+                {
+                    "key": "rashTimeOfDay",
+                    "label": "Thời điểm xuất hiện nốt đỏ trong ngày",
+                    "required": false
+                },
+                {
+                    "key": "rashCountPerDay",
+                    "label": "Số lượng nốt đỏ trung bình/ngày",
+                    "required": false
+                },
+                {
+                    "key": "rashSensation",
+                    "label": "Cảm giác tại vị trí nốt đỏ",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "section_title": "Phù mạch",
+            "fields": [
+                {
+                    "key": "angioedemaCount",
+                    "label": "Số lần bị sưng phù từ trước đến nay",
+                    "required": false
+                },
+                {
+                    "key": "angioedemaLocation",
+                    "label": "Vị trí sưng phù",
+                    "required": false
+                },
+                {
+                    "key": "angioedemaPhotoUpload",
+                    "label": "Ảnh vị trí sưng phù (trừ Thanh quản)",
+                    "required": false
+                },
+                {
+                    "key": "angioedemaSurface",
+                    "label": "Đặc điểm bề mặt",
+                    "required": false
+                },
+                {
+                    "key": "angioedemaDurationOnTreatment",
+                    "label": "Thời gian tồn tại khi dùng thuốc",
+                    "required": false
+                },
+                {
+                    "key": "angioedemaDurationNoTreatment",
+                    "label": "Thời gian tồn tại khi không dùng thuốc",
+                    "required": false
+                },
+                {
+                    "key": "angioedemaTimeOfDay",
+                    "label": "Thời điểm xuất hiện sưng phù",
+                    "required": false
+                },
+                {
+                    "key": "angioedemaSensation",
+                    "label": "Cảm giác tại vị trí sưng phù",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "section_title": "Yếu tố khởi phát & Tiền sử",
+            "fields": [
+                {
+                    "key": "triggerInfection",
+                    "label": "Yếu tố khởi phát: Triệu chứng nhiễm trùng",
+                    "required": false
+                },
+                {
+                    "key": "triggerFood",
+                    "label": "Yếu tố khởi phát: Thức ăn",
+                    "required": false
+                },
+                {
+                    "key": "triggerDrug",
+                    "label": "Yếu tố khởi phát: Thuốc",
+                    "required": false
+                },
+                {
+                    "key": "triggerInsectBite",
+                    "label": "Yếu tố khởi phát: Côn trùng đốt",
+                    "required": false
+                },
+                {
+                    "key": "triggerOther",
+                    "label": "Yếu tố khởi phát khác (ghi rõ)",
+                    "required": false
+                },
+                {
+                    "key": "personalAllergyHistory",
+                    "label": "Tiền sử dị ứng",
+                    "required": false
+                },
+                {
+                    "key": "personalDrugHistory",
+                    "label": "Tiền sử dị ứng thuốc",
+                    "required": false
+                },
+                {
+                    "key": "personalUrticariaHistory",
+                    "label": "Tiền sử mắc mày đay",
+                    "required": false
+                },
+                {
+                    "key": "personalOtherHistory",
+                    "label": "Tiền sử bệnh khác (ghi rõ)",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "section_title": "Khám thực thể",
+            "fields": [
+                {
+                    "key": "fever",
+                    "label": "Có sốt hay không",
+                    "required": false
+                },
+                {
+                    "key": "feverTemperature",
+                    "label": "Nhiệt độ khi sốt",
+                    "required": false
+                },
+                {
+                    "key": "pulseRate",
+                    "label": "Mạch (lần/phút)",
+                    "required": false
+                },
+                {
+                    "key": "bloodPressure",
+                    "label": "Huyết áp (mmHg)",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "section_title": "Chẩn đoán & Xét nghiệm",
+            "fields": [
+                {
+                    "key": "preliminaryDiagnosis",
+                    "label": "Danh sách chẩn đoán sơ bộ",
+                    "required": false
+                },
+                {
+                    "key": "wbc",
+                    "label": "Số lượng bạch cầu (G/L)",
+                    "required": false
+                },
+                {
+                    "key": "neu",
+                    "label": "Số lượng bạch cầu trung tính (G/L)",
+                    "required": false
+                },
+                {
+                    "key": "crp",
+                    "label": "CRP (mg/L)",
+                    "required": false
+                },
+                {
+                    "key": "totalIgE",
+                    "label": "IgE toàn phần (Ku/L)",
+                    "required": false
+                },
+                {
+                    "key": "otherLabTests",
+                    "label": "Xét nghiệm khác",
+                    "required": false
+                },
+                {
+                    "key": "finalDiagnosis",
+                    "label": "Danh sách chẩn đoán xác định",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "section_title": "Điều trị & Hẹn tái khám",
+            "fields": [
+                {
+                    "key": "antihistamineH1",
+                    "label": "Thuốc kháng histamin H1",
+                    "required": false
+                },
+                {
+                    "key": "corticosteroidSystemic",
+                    "label": "Thuốc corticoid toàn thân",
+                    "required": false
+                },
+                {
+                    "key": "hospitalization",
+                    "label": "Nhập viện hay không",
+                    "required": false
+                },
+                {
+                    "key": "followUpDate",
+                    "label": "Ngày hẹn tái khám",
+                    "required": false
+                }
+            ]
+        }
+    ]
+}

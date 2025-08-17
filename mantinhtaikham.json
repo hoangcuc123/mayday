@@ -1,0 +1,310 @@
+{
+    "title": "BỆNH ÁN MẠN TÍNH TÁI KHÁM",
+    "sections": [
+        {
+            "section_title": "Thông tin cơ bản của bệnh nhân",
+            "fields": [
+                {
+                    "key": "fullName",
+                    "required": true,
+                    "label": "Họ và tên của bệnh nhân"
+                },
+                {
+                    "key": "nationalId",
+                    "required": true,
+                    "label": "Số căn cước công dân của bệnh nhân"
+                },
+                {
+                    "key": "age",
+                    "required": false,
+                    "label": "Tuổi của bệnh nhân; nếu dưới 6 tuổi thì ghi theo tháng"
+                },
+                {
+                    "key": "gender",
+                    "required": false,
+                    "label": "Giới tính của bệnh nhân (0: Nam, 1: Nữ)"
+                },
+                {
+                    "key": "phoneNumber",
+                    "required": true,
+                    "label": "Số điện thoại của bệnh nhân"
+                },
+                {
+                    "key": "addressArea",
+                    "required": false,
+                    "label": "Khu vực sinh sống: Thành thị, Nông thôn, Miền biển, Vùng núi"
+                },
+                {
+                    "key": "occupation",
+                    "required": true,
+                    "label": "Nghề nghiệp: Công nhân, Nông dân, HS-SV, Cán bộ công chức, Khác"
+                },
+                {
+                    "key": "exposureHistory",
+                    "required": true,
+                    "label": "Tiền sử tiếp xúc: Hóa chất, Ánh sáng, Bụi, Khác, Không"
+                },
+                {
+                    "key": "recordOpenDate",
+                    "required": false,
+                    "label": "Ngày mở hồ sơ bệnh án"
+                },
+                {
+                    "key": "examinationDate",
+                    "required": false,
+                    "label": "Ngày khám bệnh"
+                }
+            ]
+        },
+        {
+            "section_title": "Theo dõi hoạt động bệnh & kiểm soát bệnh",
+            "fields": [
+                {
+                    "key": "uas7OnTreatmentISS7",
+                    "required": false,
+                    "label": "Điểm ISS7 khi dùng thuốc"
+                },
+                {
+                    "key": "uas7OnTreatmentHSS7",
+                    "required": false,
+                    "label": "Điểm HSS7 khi dùng thuốc"
+                },
+                {
+                    "key": "uas7OffTreatmentISS7",
+                    "required": false,
+                    "label": "Điểm ISS7 khi ngừng thuốc"
+                },
+                {
+                    "key": "uas7OffTreatmentHSS7",
+                    "required": false,
+                    "label": "Điểm HSS7 khi ngừng thuốc"
+                },
+                {
+                    "key": "uctScore",
+                    "required": false,
+                    "label": "Mức độ kiểm soát bệnh (UCT)"
+                },
+                {
+                    "key": "treatmentResponse",
+                    "required": false,
+                    "label": "Mức độ đáp ứng điều trị: kiểm soát hoàn toàn, kiểm soát tốt, kiểm soát kém (mức nhẹ/trung bình/cao)"
+                }
+            ]
+        },
+        {
+            "section_title": "Tác dụng không mong muốn",
+            "fields": [
+                {
+                    "key": "sideEffectFatigue",
+                    "required": false,
+                    "label": "Tác dụng phụ – Toàn trạng: Mệt mỏi"
+                },
+                {
+                    "key": "sideEffectHeadache",
+                    "required": false,
+                    "label": "Tác dụng phụ – Thần kinh: Đau đầu"
+                },
+                {
+                    "key": "sideEffectDizziness",
+                    "required": false,
+                    "label": "Tác dụng phụ – Thần kinh: Chóng mặt"
+                },
+                {
+                    "key": "sideEffectSleepy",
+                    "required": false,
+                    "label": "Tác dụng phụ – Thần kinh: Buồn ngủ"
+                },
+                {
+                    "key": "sideEffectDrowsiness",
+                    "required": false,
+                    "label": "Tác dụng phụ – Thần kinh: Ngủ gà"
+                },
+                {
+                    "key": "sideEffectLossOfAppetite",
+                    "required": false,
+                    "label": "Tác dụng phụ – Tiêu hóa: Chán ăn"
+                },
+                {
+                    "key": "sideEffectIndigestion",
+                    "required": false,
+                    "label": "Tác dụng phụ – Tiêu hóa: Khó tiêu"
+                },
+                {
+                    "key": "sideEffectAbdominalPain",
+                    "required": false,
+                    "label": "Tác dụng phụ – Tiêu hóa: Đau bụng"
+                },
+                {
+                    "key": "sideEffectChestPain",
+                    "required": false,
+                    "label": "Tác dụng phụ – Tim mạch: Đau ngực"
+                },
+                {
+                    "key": "sideEffectPalpitations",
+                    "required": false,
+                    "label": "Tác dụng phụ – Tim mạch: Hồi hộp, trống ngực"
+                },
+                {
+                    "key": "sideEffectOther",
+                    "required": false,
+                    "label": "Tác dụng phụ khác (ghi rõ)"
+                }
+            ]
+        },
+        {
+            "section_title": "Triệu chứng hiện tại",
+            "fields": [
+                {
+                    "key": "rashPresent",
+                    "required": false,
+                    "label": "Có sẩn phù hay không"
+                },
+                {
+                    "key": "angioedemaPresent",
+                    "required": false,
+                    "label": "Có phù mạch hay không"
+                },
+                {
+                    "key": "angioedemaLocation",
+                    "required": false,
+                    "label": "Vị trí phù mạch"
+                },
+                {
+                    "key": "aas7Score",
+                    "required": false,
+                    "label": "Điểm AAS7"
+                },
+                {
+                    "key": "anaphylaxisSymptoms",
+                    "required": false,
+                    "label": "Triệu chứng phản vệ"
+                },
+                {
+                    "key": "newMedicalHistory",
+                    "required": false,
+                    "label": "Tiểu sử bệnh án khác mới phát hiện"
+                }
+            ]
+        },
+        {
+            "section_title": "Kết quả test",
+            "fields": [
+                {
+                    "key": "dermatographismTest",
+                    "required": false,
+                    "label": "Kết quả da vẽ nổi: Dương tính hoặc Âm tính"
+                },
+                {
+                    "key": "fricScore",
+                    "required": false,
+                    "label": "Điểm Fric"
+                },
+                {
+                    "key": "itchScoreNRS",
+                    "required": false,
+                    "label": "Điểm ngứa NRS"
+                },
+                {
+                    "key": "painScoreNRS",
+                    "required": false,
+                    "label": "Điểm đau NRS"
+                },
+                {
+                    "key": "burningScoreNRS",
+                    "required": false,
+                    "label": "Điểm bỏng rát NRS"
+                },
+                {
+                    "key": "coldUrticariaTemptest",
+                    "required": false,
+                    "label": "Mày đay do lạnh (Temptest): Dương tính hoặc Âm tính"
+                },
+                {
+                    "key": "coldPositiveTemperature",
+                    "required": false,
+                    "label": "Vùng nhiệt độ dương tính (°C)"
+                },
+                {
+                    "key": "itchScoreNRSCold",
+                    "required": false,
+                    "label": "Điểm ngứa NRS khi Temptest"
+                },
+                {
+                    "key": "painScoreNRSCold",
+                    "required": false,
+                    "label": "Điểm đau NRS khi Temptest"
+                },
+                {
+                    "key": "burningScoreNRSCold",
+                    "required": false,
+                    "label": "Điểm bỏng rát NRS khi Temptest"
+                },
+                {
+                    "key": "coldUrticariaIceTest",
+                    "required": false,
+                    "label": "Mày đay do lạnh – Test cục đá: Dương tính hoặc Âm tính"
+                },
+                {
+                    "key": "coldIceTimeThreshold",
+                    "required": false,
+                    "label": "Ngưỡng thời gian (phút) khi Test cục đá"
+                },
+                {
+                    "key": "itchScoreNRSIce",
+                    "required": false,
+                    "label": "Điểm ngứa NRS khi Test cục đá"
+                },
+                {
+                    "key": "painScoreNRSIce",
+                    "required": false,
+                    "label": "Điểm đau NRS khi Test cục đá"
+                },
+                {
+                    "key": "burningScoreNRSIce",
+                    "required": false,
+                    "label": "Điểm bỏng rát NRS khi Test cục đá"
+                },
+                {
+                    "key": "cholinergicUrticariaTest",
+                    "required": false,
+                    "label": "Mày đay do choline: Dương tính hoặc Âm tính"
+                },
+                {
+                    "key": "cholinergicAppearanceTime",
+                    "required": false,
+                    "label": "Thời gian xuất hiện tổn thương (phút) khi test choline"
+                },
+                {
+                    "key": "itchScoreNRSCholine",
+                    "required": false,
+                    "label": "Điểm ngứa NRS khi test choline"
+                },
+                {
+                    "key": "painScoreNRSCholine",
+                    "required": false,
+                    "label": "Điểm đau NRS khi test choline"
+                },
+                {
+                    "key": "burningScoreNRSCholine",
+                    "required": false,
+                    "label": "Điểm bỏng rát NRS khi test choline"
+                },
+                {
+                    "key": "cusiScore",
+                    "required": false,
+                    "label": "Mức độ hoạt động bệnh CUSI"
+                },
+                {
+                    "key": "otherCause",
+                    "required": false,
+                    "label": "Căn nguyên khác"
+                },
+                {
+                    "key": "actScore",
+                    "required": false,
+                    "label": "Mức độ kiểm soát bệnh ACT"
+                }
+            ]
+        }
+    ]
+}

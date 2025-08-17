@@ -1,0 +1,1397 @@
+{
+    "title": "BỆNH ÁN CẤP TÍNH (Acute Medical Record)",
+    "sections": [
+        {
+            "section_title": "1. THÔNG TIN CƠ BẢN CỦA BỆNH NHÂN (PATIENT'S BASIC INFORMATION)",
+            "fields": [
+                {
+                    "key": "fullName",
+                    "label": "Họ tên* (Full name*)",
+                    "type": "text",
+                    "required": true
+                },
+                {
+                    "key": "nationalId",
+                    "label": "CCCD* (ID Card*)",
+                    "type": "text",
+                    "required": true
+                },
+                {
+                    "key": "age",
+                    "label": "Tuổi (Age)",
+                    "type": "number",
+                    "notes": "(<6 tuổi: ghi tháng)"
+                },
+                {
+                    "key": "gender",
+                    "label": "Giới (Gender)",
+                    "type": "choice",
+                    "options": [
+                        {
+                            "label": "Nam (Male)",
+                            "value": "0"
+                        },
+                        {
+                            "label": "Nữ (Female)",
+                            "value": "1"
+                        }
+                    ]
+                },
+                {
+                    "key": "phoneNumber",
+                    "label": "Điện thoại* (Phone number*)",
+                    "type": "text",
+                    "required": true
+                },
+                {
+                    "key": "addressArea",
+                    "label": "Địa dư (Location)",
+                    "type": "choice",
+                    "options": [
+                        {
+                            "label": "Thành thị (Urban)",
+                            "value": "urban"
+                        },
+                        {
+                            "label": "Nông thôn (Rural)",
+                            "value": "rural"
+                        },
+                        {
+                            "label": "Miền biển (Coastal)",
+                            "value": "coastal"
+                        },
+                        {
+                            "label": "Vùng núi (Mountainous)",
+                            "value": "mountainous"
+                        }
+                    ]
+                },
+                {
+                    "key": "occupation",
+                    "label": "Nghề nghiệp* (Occupation*)",
+                    "type": "text",
+                    "required": true
+                },
+                {
+                    "key": "exposureHistory",
+                    "label": "Tiền sử tiếp xúc* (History of exposure*)",
+                    "type": "multiselect",
+                    "options": [
+                        {
+                            "label": "Tiếp xúc hóa chất (Chemical exposure)",
+                            "value": "chemicals"
+                        },
+                        {
+                            "label": "Tiếp xúc ánh sáng (Light exposure)",
+                            "value": "light"
+                        },
+                        {
+                            "label": "Tiếp xúc bụi (Dust exposure)",
+                            "value": "dust"
+                        },
+                        {
+                            "label": "Khác (Other)",
+                            "value": "other"
+                        },
+                        {
+                            "label": "Không (None)",
+                            "value": "none"
+                        }
+                    ],
+                    "required": true
+                },
+                {
+                    "key": "recordOpenDate",
+                    "label": "Ngày mở hồ sơ (Date of opening record)",
+                    "type": "date"
+                },
+                {
+                    "key": "examinationDate",
+                    "label": "Ngày khám (Date of examination)",
+                    "type": "date"
+                }
+            ]
+        },
+        {
+            "section_title": "2. BỆNH ÁN CẤP TÍNH (ACUTE MEDICAL RECORD)",
+            "fields": [
+                {
+                    "key": "continuousOutbreak6Weeks",
+                    "label": "Bạn đã có đợt nào bị liên tục >= 6 tuần chưa? (Have you had a continuous outbreak >= 6 weeks?)",
+                    "type": "choice",
+                    "options": [
+                        {
+                            "label": "Có (Yes)",
+                            "value": "yes"
+                        },
+                        {
+                            "label": "Không (No)",
+                            "value": "no"
+                        }
+                    ]
+                },
+                {
+                    "key": "rashOrAngioedema",
+                    "label": "Bạn bị nốt đỏ (sẩn phù) xuất hiện và mất đi trong vòng 24h hay bị sưng phù (phù mạch) xuất hiện và mất đi trong vòng 72h? (Do you have red spots (wheals) appearing and disappearing within 24h or swelling (angioedema) appearing and disappearing within 72h?)",
+                    "type": "multiselect",
+                    "options": [
+                        {
+                            "label": "Sẩn phù (Wheals)",
+                            "value": "wheals"
+                        },
+                        {
+                            "label": "Phù mạch (Angioedema)",
+                            "value": "angioedema"
+                        }
+                    ]
+                },
+                {
+                    "key": "firstOutbreakSinceWeeks",
+                    "label": "Lần đầu bị tổn thương là từ bao giờ? (When was the first time you had the lesion?)",
+                    "type": "text"
+                },
+                {
+                    "key": "numberOfEpisodes",
+                    "label": "Số đợt bị? (Number of episodes?)",
+                    "type": "text"
+                },
+                {
+                    "key": "episodesHistory",
+                    "type": "group",
+                    "label": "History of Episodes",
+                    "fields": [
+                        {
+                            "key": "episode_1",
+                            "label": "Đợt 1 (Episode 1)",
+                            "type": "group",
+                            "fields": [
+                                {
+                                    "key": "outbreakTimeRange1",
+                                    "label": "Từ tháng ... năm* ... đến tháng ... năm* ... (From month ... year* ... to month ... year* ...)",
+                                    "type": "text",
+                                    "required": true
+                                },
+                                {
+                                    "key": "treatmentReceived1",
+                                    "label": "Có điều trị hay không? (Did you receive treatment?)",
+                                    "type": "choice",
+                                    "options": [
+                                        {
+                                            "label": "Có (Yes)",
+                                            "value": "yes"
+                                        },
+                                        {
+                                            "label": "Không (No)",
+                                            "value": "no"
+                                        },
+                                        {
+                                            "label": "Không nhớ (Don't remember)",
+                                            "value": "not_sure"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "key": "drugResponse1",
+                                    "label": "Tình trạng đáp ứng với thuốc (Response to treatment)",
+                                    "type": "choice",
+                                    "options": [
+                                        {
+                                            "label": "Khỏi hoàn toàn (Completely cured)",
+                                            "value": "completely_cured"
+                                        },
+                                        {
+                                            "label": "Không khỏi (Not cured)",
+                                            "value": "not_cured"
+                                        },
+                                        {
+                                            "label": "Giảm (Reduced)",
+                                            "value": "reduced"
+                                        },
+                                        {
+                                            "label": "Nặng lên (Worsened)",
+                                            "value": "worsened"
+                                        }
+                                    ],
+                                    "visibleIf": {
+                                        "field": "treatmentReceived1",
+                                        "value": "yes"
+                                    }
+                                },
+                                {
+                                    "key": "drugResponseSymptom1",
+                                    "label": "Triệu chứng Giảm/ Nặng lên là gì? (What are the reduced/worsened symptoms?)",
+                                    "type": "multiselect",
+                                    "options": [
+                                        {
+                                            "label": "Nốt đỏ (Red spots)",
+                                            "value": "red_spots"
+                                        },
+                                        {
+                                            "label": "Ngứa (Itching)",
+                                            "value": "itching"
+                                        },
+                                        {
+                                            "label": "Cả hai (Both)",
+                                            "value": "both"
+                                        }
+                                    ],
+                                    "visibleIf": {
+                                        "field": "drugResponse1",
+                                        "value": [
+                                            "reduced",
+                                            "worsened"
+                                        ]
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "key": "episode_2",
+                            "label": "Đợt 2 (Episode 2)",
+                            "type": "group",
+                            "fields": [
+                                {
+                                    "key": "outbreakTimeRange2",
+                                    "label": "Từ tháng ... năm* ... đến tháng ... năm* ... (From month ... year* ... to month ... year* ...)",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "treatmentReceived2",
+                                    "label": "Có điều trị hay không? (Did you receive treatment?)",
+                                    "type": "choice",
+                                    "options": [
+                                        {
+                                            "label": "Có (Yes)",
+                                            "value": "yes"
+                                        },
+                                        {
+                                            "label": "Không (No)",
+                                            "value": "no"
+                                        },
+                                        {
+                                            "label": "Không nhớ (Don't remember)",
+                                            "value": "not_sure"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "key": "drugResponse2",
+                                    "label": "Tình trạng đáp ứng với thuốc (Response to treatment)",
+                                    "type": "choice",
+                                    "options": [
+                                        {
+                                            "label": "Khỏi hoàn toàn (Completely cured)",
+                                            "value": "completely_cured"
+                                        },
+                                        {
+                                            "label": "Không khỏi (Not cured)",
+                                            "value": "not_cured"
+                                        },
+                                        {
+                                            "label": "Giảm (Reduced)",
+                                            "value": "reduced"
+                                        },
+                                        {
+                                            "label": "Nặng lên (Worsened)",
+                                            "value": "worsened"
+                                        }
+                                    ],
+                                    "visibleIf": {
+                                        "field": "treatmentReceived2",
+                                        "value": "yes"
+                                    }
+                                },
+                                {
+                                    "key": "drugResponseSymptom2",
+                                    "label": "Triệu chứng Giảm/ Nặng lên là gì? (What are the reduced/worsened symptoms?)",
+                                    "type": "multiselect",
+                                    "options": [
+                                        {
+                                            "label": "Nốt đỏ (Red spots)",
+                                            "value": "red_spots"
+                                        },
+                                        {
+                                            "label": "Ngứa (Itching)",
+                                            "value": "itching"
+                                        },
+                                        {
+                                            "label": "Cả hai (Both)",
+                                            "value": "both"
+                                        }
+                                    ],
+                                    "visibleIf": {
+                                        "field": "drugResponse2",
+                                        "value": [
+                                            "reduced",
+                                            "worsened"
+                                        ]
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "key": "episode_3",
+                            "label": "Đợt 3 (Episode 3)",
+                            "type": "group",
+                            "fields": [
+                                {
+                                    "key": "outbreakTimeRange3",
+                                    "label": "Từ tháng ... năm* ... đến tháng ... năm* ... (From month ... year* ... to month ... year* ...)",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "treatmentReceived3",
+                                    "label": "Có điều trị hay không? (Did you receive treatment?)",
+                                    "type": "choice",
+                                    "options": [
+                                        {
+                                            "label": "Có (Yes)",
+                                            "value": "yes"
+                                        },
+                                        {
+                                            "label": "Không (No)",
+                                            "value": "no"
+                                        },
+                                        {
+                                            "label": "Không nhớ (Don't remember)",
+                                            "value": "not_sure"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "key": "drugResponse3",
+                                    "label": "Tình trạng đáp ứng với thuốc (Response to treatment)",
+                                    "type": "choice",
+                                    "options": [
+                                        {
+                                            "label": "Khỏi hoàn toàn (Completely cured)",
+                                            "value": "completely_cured"
+                                        },
+                                        {
+                                            "label": "Không khỏi (Not cured)",
+                                            "value": "not_cured"
+                                        },
+                                        {
+                                            "label": "Giảm (Reduced)",
+                                            "value": "reduced"
+                                        },
+                                        {
+                                            "label": "Nặng lên (Worsened)",
+                                            "value": "worsened"
+                                        }
+                                    ],
+                                    "visibleIf": {
+                                        "field": "treatmentReceived3",
+                                        "value": "yes"
+                                    }
+                                },
+                                {
+                                    "key": "drugResponseSymptom3",
+                                    "label": "Triệu chứng Giảm/ Nặng lên là gì? (What are the reduced/worsened symptoms?)",
+                                    "type": "multiselect",
+                                    "options": [
+                                        {
+                                            "label": "Nốt đỏ (Red spots)",
+                                            "value": "red_spots"
+                                        },
+                                        {
+                                            "label": "Ngứa (Itching)",
+                                            "value": "itching"
+                                        },
+                                        {
+                                            "label": "Cả hai (Both)",
+                                            "value": "both"
+                                        }
+                                    ],
+                                    "visibleIf": {
+                                        "field": "drugResponse3",
+                                        "value": [
+                                            "reduced",
+                                            "worsened"
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "key": "currentOutbreak",
+                    "label": "Đợt này* (This episode*)",
+                    "type": "group",
+                    "fields": [
+                        {
+                            "key": "currentOutbreakStart",
+                            "label": "Từ tháng* ... năm* ... đến tháng* ... năm* ... (From month* ... year* ... to month* ... year* ...)",
+                            "type": "text",
+                            "required": true
+                        }
+                    ]
+                },
+                {
+                    "key": "drugName",
+                    "label": "Tên thuốc bạn đã sử dụng (Name of medication you have used)",
+                    "type": "textarea"
+                },
+                {
+                    "key": "drugDuration",
+                    "label": "Thời gian sử dụng (Duration of use)",
+                    "type": "textarea"
+                },
+                {
+                    "key": "drugDosage",
+                    "label": "Liều dùng (Dosage)",
+                    "type": "textarea"
+                },
+                {
+                    "key": "rashAppearanceTime",
+                    "label": "5. Nốt đỏ xuất hiện khi nào? (When do the red spots appear?)",
+                    "type": "multiselect",
+                    "options": [
+                        {
+                            "label": "Khi có các yếu tố kích thích (When there are triggers)",
+                            "value": "triggers"
+                        },
+                        {
+                            "label": "Gãi, chà xát, sau tắm (Scratching, rubbing, after bathing)",
+                            "value": "scratching_rubbing_bathing",
+                            "visibleIf": {
+                                "field": "rashAppearanceTime",
+                                "value": "triggers"
+                            }
+                        },
+                        {
+                            "label": "Ra mồ hôi, +/- vận động (Sweating, +/- exercise)",
+                            "value": "sweating_exercise",
+                            "visibleIf": {
+                                "field": "rashAppearanceTime",
+                                "value": "triggers"
+                            }
+                        },
+                        {
+                            "label": "Không có mồ hôi, +/- ngâm tắm nước nóng, ăn đồ cay nóng, xúc động (No sweat, +/- hot bath, eating spicy food, emotional excitement)",
+                            "value": "no_sweat_hot_bath_spicy_food_emotional",
+                            "visibleIf": {
+                                "field": "rashAppearanceTime",
+                                "value": "triggers"
+                            }
+                        },
+                        {
+                            "label": "Khi thời tiết lạnh + nhiệt lượng cơ thể tăng (When it's cold + body temperature increases)",
+                            "value": "cold_weather_increased_temp",
+                            "visibleIf": {
+                                "field": "rashAppearanceTime",
+                                "value": "triggers"
+                            }
+                        },
+                        {
+                            "label": "Mang vật nặng (đeo túi/cặp trên vai, bê vật nặng bằng tay) (Carrying heavy objects (wearing a bag/backpack on shoulder, carrying heavy objects with hands))",
+                            "value": "carrying_heavy_objects",
+                            "visibleIf": {
+                                "field": "rashAppearanceTime",
+                                "value": "triggers"
+                            }
+                        },
+                        {
+                            "label": "Tiếp xúc với đồ vật lạnh (thời tiết lạnh, các kiểu lạnh + không cần vận động) (Contact with cold objects (cold weather, all types of cold + no need for exercise))",
+                            "value": "contact_with_cold",
+                            "visibleIf": {
+                                "field": "rashAppearanceTime",
+                                "value": "triggers"
+                            }
+                        },
+                        {
+                            "label": "Tiếp xúc với ánh sáng (Light exposure)",
+                            "value": "light_exposure",
+                            "visibleIf": {
+                                "field": "rashAppearanceTime",
+                                "value": "triggers"
+                            }
+                        },
+                        {
+                            "label": "Do rung (cầm máy cắt cỏ, dùng các dụng cụ rung liên tục) (From vibration (holding a lawnmower, using continuously vibrating tools))",
+                            "value": "vibration",
+                            "visibleIf": {
+                                "field": "rashAppearanceTime",
+                                "value": "triggers"
+                            }
+                        },
+                        {
+                            "label": "Do các chất cụ thể (Gang tay, nước…) (From specific substances (Gloves, water...))",
+                            "value": "specific_substances",
+                            "visibleIf": {
+                                "field": "rashAppearanceTime",
+                                "value": "triggers"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "key": "rashWorseningFactors",
+                    "label": "6. Trong các yếu tố sau, có yếu tố nào làm nặng bệnh của bạn lên không? (M) (Among the following factors, does any of them worsen your condition? (M))",
+                    "type": "multiselect",
+                    "options": [
+                        {
+                            "label": "Stress",
+                            "value": "stress"
+                        },
+                        {
+                            "label": "Thức ăn (Food)",
+                            "value": "food"
+                        },
+                        {
+                            "label": "Chống viêm, giảm đau (Paracetalmon, …) (Anti-inflammatory, pain reliever (Paracetamol, ...))",
+                            "value": "anti_inflammatory_pain_reliever"
+                        }
+                    ]
+                },
+                {
+                    "key": "rashFoodTriggerDetail",
+                    "label": "Thức ăn cụ thể (Specific food)",
+                    "type": "textarea",
+                    "visibleIf": {
+                        "field": "rashWorseningFactors",
+                        "value": "food"
+                    }
+                },
+                {
+                    "key": "rashDrugTriggerDetail",
+                    "label": "Tên thuốc cụ thể (Specific medication name)",
+                    "type": "textarea",
+                    "visibleIf": {
+                        "field": "rashWorseningFactors",
+                        "value": "anti_inflammatory_pain_reliever"
+                    }
+                },
+                {
+                    "key": "rashLocation",
+                    "label": "7. Bạn bị nốt đỏ ở vị trí nào? (M) (Where do you have red spots? (M))",
+                    "type": "multiselect",
+                    "options": [
+                        {
+                            "label": "Trên mặt (On the face)",
+                            "value": "face"
+                        },
+                        {
+                            "label": "Thân (Trunk)",
+                            "value": "trunk"
+                        },
+                        {
+                            "label": "Bàn tay (Hands)",
+                            "value": "hands"
+                        },
+                        {
+                            "label": "Cẳng tay (Forearms)",
+                            "value": "forearms"
+                        },
+                        {
+                            "label": "Cánh tay (Upper arms)",
+                            "value": "upper_arms"
+                        },
+                        {
+                            "label": "Sinh dục (Genitals)",
+                            "value": "genitals"
+                        },
+                        {
+                            "label": "Đùi (Thighs)",
+                            "value": "thighs"
+                        },
+                        {
+                            "label": "Cẳng chân (Shins)",
+                            "value": "shins"
+                        },
+                        {
+                            "label": "Bàn chân (Feet)",
+                            "value": "feet"
+                        }
+                    ],
+                    "has_upload_field": true
+                },
+                {
+                    "key": "rashSize",
+                    "label": "8. Kích thước trung bình của nốt đỏ (Average size of red spots)",
+                    "type": "group",
+                    "fields": [
+                        {
+                            "key": "rashSizeOnTreatment",
+                            "label": "Dùng thuốc (With medication)",
+                            "type": "choice",
+                            "options": [
+                                {
+                                    "label": "<3mm",
+                                    "value": "<3mm"
+                                },
+                                {
+                                    "label": "3-10mm",
+                                    "value": "3-10mm"
+                                },
+                                {
+                                    "label": "10-50mm",
+                                    "value": "10-50mm"
+                                },
+                                {
+                                    "label": ">50mm",
+                                    "value": ">50mm"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "rashSizeNoTreatment",
+                            "label": "Không dùng thuốc (Without medication)",
+                            "type": "choice",
+                            "options": [
+                                {
+                                    "label": "<3mm",
+                                    "value": "<3mm"
+                                },
+                                {
+                                    "label": "3-10mm",
+                                    "value": "3-10mm"
+                                },
+                                {
+                                    "label": "10-50mm",
+                                    "value": "10-50mm"
+                                },
+                                {
+                                    "label": ">50mm",
+                                    "value": ">50mm"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "key": "rashBorder",
+                    "label": "9. Ranh giới của nốt đỏ (Border of red spots)",
+                    "type": "choice",
+                    "options": [
+                        {
+                            "label": "Có bờ (Well-demarcated)",
+                            "value": "well_demarcated"
+                        },
+                        {
+                            "label": "Không bờ (Ill-defined)",
+                            "value": "ill_defined"
+                        }
+                    ]
+                },
+                {
+                    "key": "rashShape",
+                    "label": "10. Hình dạng (Shape)",
+                    "type": "choice",
+                    "options": [
+                        {
+                            "label": "Tròn/Oval (Round/Oval)",
+                            "value": "round_oval"
+                        },
+                        {
+                            "label": "Dài (Elongated)",
+                            "value": "elongated"
+                        },
+                        {
+                            "label": "Hình dạng khác (Other shape)",
+                            "value": "other_shape"
+                        }
+                    ]
+                },
+                {
+                    "key": "rashColor",
+                    "label": "11. Màu sắc (Color)",
+                    "type": "multiselect",
+                    "options": [
+                        {
+                            "label": "Trùng màu da (Skin-colored)",
+                            "value": "skin_colored"
+                        },
+                        {
+                            "label": "Đỏ hồng (Pinkish-red)",
+                            "value": "pinkish_red"
+                        },
+                        {
+                            "label": "Trắng (White)",
+                            "value": "white"
+                        },
+                        {
+                            "label": "Xuất huyết (đỏ đậm, tím) (Hemorrhagic (dark red, purple))",
+                            "value": "hemorrhagic"
+                        },
+                        {
+                            "label": "Có quầng trắng xung quanh nốt đỏ (With a white halo around the red spot)",
+                            "value": "white_halo"
+                        }
+                    ]
+                },
+                {
+                    "key": "rashDuration",
+                    "label": "12. Thời gian tồn tại trung bình của 1 nốt đỏ (Average duration of a red spot)",
+                    "type": "group",
+                    "fields": [
+                        {
+                            "key": "rashDurationOnTreatment",
+                            "label": "Dùng thuốc (With medication)",
+                            "type": "choice",
+                            "options": [
+                                {
+                                    "label": "<1h",
+                                    "value": "<1h"
+                                },
+                                {
+                                    "label": "1h-6h",
+                                    "value": "1h-6h"
+                                },
+                                {
+                                    "label": "6h-12h",
+                                    "value": "6h-12h"
+                                },
+                                {
+                                    "label": "12h-24h",
+                                    "value": "12h-24h"
+                                },
+                                {
+                                    "label": "Không biết (Don't know)",
+                                    "value": "don't_know"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "rashDurationNoTreatment",
+                            "label": "Không dùng thuốc (Without medication)",
+                            "type": "choice",
+                            "options": [
+                                {
+                                    "label": "<1h",
+                                    "value": "<1h"
+                                },
+                                {
+                                    "label": "1h-6h",
+                                    "value": "1h-6h"
+                                },
+                                {
+                                    "label": "6h-12h",
+                                    "value": "6h-12h"
+                                },
+                                {
+                                    "label": "12h-24h",
+                                    "value": "12h-24h"
+                                },
+                                {
+                                    "label": "Không biết (Don't know)",
+                                    "value": "don't_know"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "key": "rashSurface",
+                    "label": "13. Đặc điểm bề mặt (Surface characteristics)",
+                    "type": "multiselect",
+                    "options": [
+                        {
+                            "label": "Có vảy (Scaly)",
+                            "value": "scaly"
+                        },
+                        {
+                            "label": "Có mụn nước (Vesicular)",
+                            "value": "vesicular"
+                        },
+                        {
+                            "label": "Có giãn mạch (Telangiectatic)",
+                            "value": "telangiectatic"
+                        },
+                        {
+                            "label": "Không vảy (Not scaly)",
+                            "value": "not_scaly"
+                        },
+                        {
+                            "label": "Không mụn nước (Not vesicular)",
+                            "value": "not_vesicular"
+                        },
+                        {
+                            "label": "Không giãn mạch (Not telangiectatic)",
+                            "value": "not_telangiectatic"
+                        }
+                    ]
+                },
+                {
+                    "key": "rashTimeOfDay",
+                    "label": "14. Nốt đỏ thường xuất hiện vào thời gian nào trong ngày? (What time of day do the red spots usually appear?)",
+                    "type": "choice",
+                    "options": [
+                        {
+                            "label": "Sáng (Morning)",
+                            "value": "morning"
+                        },
+                        {
+                            "label": "Chiều (Afternoon)",
+                            "value": "afternoon"
+                        },
+                        {
+                            "label": "Tối (Evening)",
+                            "value": "evening"
+                        },
+                        {
+                            "label": "Đêm (Night)",
+                            "value": "night"
+                        },
+                        {
+                            "label": "Không có thời điểm cụ thể (No specific time)",
+                            "value": "no_specific_time"
+                        }
+                    ]
+                },
+                {
+                    "key": "rashCountPerDay",
+                    "label": "15. Số lượng nốt đỏ trung bình/ngày: ( theo thang UAS7 ) (Average number of red spots/day: (according to UAS7 scale))",
+                    "type": "choice",
+                    "options": [
+                        {
+                            "label": "0-20",
+                            "value": "0-20"
+                        },
+                        {
+                            "label": "21-50",
+                            "value": "21-50"
+                        },
+                        {
+                            "label": ">50",
+                            "value": ">50"
+                        }
+                    ]
+                },
+                {
+                    "key": "rashSensation",
+                    "label": "16. Cảm giác tại vị trí nốt đỏ (Sensation at the red spot location)",
+                    "type": "multiselect",
+                    "options": [
+                        {
+                            "label": "Ngứa (Itching)",
+                            "value": "itching"
+                        },
+                        {
+                            "label": "Bỏng rát (Burning sensation)",
+                            "value": "burning"
+                        },
+                        {
+                            "label": "Tức (Tightness)",
+                            "value": "tightness"
+                        },
+                        {
+                            "label": "Đau (Pain)",
+                            "value": "pain"
+                        }
+                    ]
+                },
+                {
+                    "key": "angioedemaCount",
+                    "label": "3. Số lần bạn bị sưng phù từ trước đến nay (Number of times you have had swelling so far)",
+                    "type": "text"
+                },
+                {
+                    "key": "angioedemaLocation",
+                    "label": "4. Bạn bị sưng phù ở vị trí nào? (M) (Where do you have swelling? (M))",
+                    "type": "multiselect",
+                    "options": [
+                        {
+                            "label": "Mắt (Eyes)",
+                            "value": "eyes"
+                        },
+                        {
+                            "label": "Môi (Lips)",
+                            "value": "lips"
+                        },
+                        {
+                            "label": "Lưỡi (Tongue)",
+                            "value": "tongue"
+                        },
+                        {
+                            "label": "Thanh quản (Larynx)",
+                            "value": "larynx"
+                        },
+                        {
+                            "label": "Sinh dục (Genitals)",
+                            "value": "genitals"
+                        },
+                        {
+                            "label": "Bàn tay (Hands)",
+                            "value": "hands"
+                        },
+                        {
+                            "label": "Bàn chân (Feet)",
+                            "value": "feet"
+                        },
+                        {
+                            "label": "Khác (Other)",
+                            "value": "other"
+                        }
+                    ],
+                    "has_upload_field": true
+                },
+                {
+                    "key": "angioedemaSurface",
+                    "label": "5. Đặc điểm bề mặt (M) (Surface characteristics (M))",
+                    "type": "multiselect",
+                    "options": [
+                        {
+                            "label": "Có vảy (Scaly)",
+                            "value": "scaly"
+                        },
+                        {
+                            "label": "Có mụn nước (Vesicular)",
+                            "value": "vesicular"
+                        },
+                        {
+                            "label": "Có giãn mạch (Telangiectatic)",
+                            "value": "telangiectatic"
+                        },
+                        {
+                            "label": "Không vảy (Not scaly)",
+                            "value": "not_scaly"
+                        },
+                        {
+                            "label": "Không mụn nước (Not vesicular)",
+                            "value": "not_vesicular"
+                        },
+                        {
+                            "label": "Không giãn mạch (Not telangiectatic)",
+                            "value": "not_telangiectatic"
+                        }
+                    ]
+                },
+                {
+                    "key": "angioedemaDuration",
+                    "label": "6. Thời gian tồn tại trung bình của 1 sưng phù (Average duration of one swelling)",
+                    "type": "group",
+                    "fields": [
+                        {
+                            "key": "angioedemaDurationOnTreatment",
+                            "label": "Dùng thuốc (With medication)",
+                            "type": "choice",
+                            "options": [
+                                {
+                                    "label": "<1h",
+                                    "value": "<1h"
+                                },
+                                {
+                                    "label": "1h-6h",
+                                    "value": "1h-6h"
+                                },
+                                {
+                                    "label": "6h-12h",
+                                    "value": "6h-12h"
+                                },
+                                {
+                                    "label": "12h-24h",
+                                    "value": "12h-24h"
+                                },
+                                {
+                                    "label": "24h-48h",
+                                    "value": "24h-48h"
+                                },
+                                {
+                                    "label": "48h-72h",
+                                    "value": "48h-72h"
+                                },
+                                {
+                                    "label": ">72h",
+                                    "value": ">72h"
+                                },
+                                {
+                                    "label": "Không biết (Don't know)",
+                                    "value": "don't_know"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "angioedemaDurationNoTreatment",
+                            "label": "Không dùng thuốc (Without medication)",
+                            "type": "choice",
+                            "options": [
+                                {
+                                    "label": "<1h",
+                                    "value": "<1h"
+                                },
+                                {
+                                    "label": "1h-6h",
+                                    "value": "1h-6h"
+                                },
+                                {
+                                    "label": "6h-12h",
+                                    "value": "6h-12h"
+                                },
+                                {
+                                    "label": "12h-24h",
+                                    "value": "12h-24h"
+                                },
+                                {
+                                    "label": "24h-48h",
+                                    "value": "24h-48h"
+                                },
+                                {
+                                    "label": "48h-72h",
+                                    "value": "48h-72h"
+                                },
+                                {
+                                    "label": ">72h",
+                                    "value": ">72h"
+                                },
+                                {
+                                    "label": "Không biết (Don't know)",
+                                    "value": "don't_know"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "key": "angioedemaTimeOfDay",
+                    "label": "7. Sưng phù thường xuất hiện vào thời gian nào trong ngày? (What time of day does the swelling usually appear?)",
+                    "type": "choice",
+                    "options": [
+                        {
+                            "label": "Sáng (Morning)",
+                            "value": "morning"
+                        },
+                        {
+                            "label": "Chiều (Afternoon)",
+                            "value": "afternoon"
+                        },
+                        {
+                            "label": "Tối (Evening)",
+                            "value": "evening"
+                        },
+                        {
+                            "label": "Đêm (Night)",
+                            "value": "night"
+                        },
+                        {
+                            "label": "Không có thời điểm cụ thể (No specific time)",
+                            "value": "no_specific_time"
+                        }
+                    ]
+                },
+                {
+                    "key": "angioedemaSensation",
+                    "label": "8. Cảm giác tại vị trí sưng phù (Sensation at the swelling location)",
+                    "type": "multiselect",
+                    "options": [
+                        {
+                            "label": "Ngứa (Itching)",
+                            "value": "itching"
+                        },
+                        {
+                            "label": "Bỏng rát (Burning sensation)",
+                            "value": "burning"
+                        },
+                        {
+                            "label": "Tức (Tightness)",
+                            "value": "tightness"
+                        },
+                        {
+                            "label": "Đau (Pain)",
+                            "value": "pain"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "section_title": "Yếu tố khởi phát (Trigger factors)",
+            "fields": [
+                {
+                    "key": "triggerInfection",
+                    "label": "Triệu chứng nhiễm trùng (Infection symptoms)",
+                    "type": "choice",
+                    "options": [
+                        {
+                            "label": "Có (Yes)",
+                            "value": "yes"
+                        },
+                        {
+                            "label": "Không (No)",
+                            "value": "no"
+                        },
+                        {
+                            "label": "Không biết (Don't know)",
+                            "value": "don't_know"
+                        }
+                    ]
+                },
+                {
+                    "key": "triggerFood",
+                    "label": "Thức ăn (Food)",
+                    "type": "choice",
+                    "options": [
+                        {
+                            "label": "Có (Yes)",
+                            "value": "yes"
+                        },
+                        {
+                            "label": "Không (No)",
+                            "value": "no"
+                        },
+                        {
+                            "label": "Không biết (Don't know)",
+                            "value": "don't_know"
+                        }
+                    ]
+                },
+                {
+                    "key": "triggerDrug",
+                    "label": "Thuốc (Medication)",
+                    "type": "choice",
+                    "options": [
+                        {
+                            "label": "Có (Yes)",
+                            "value": "yes"
+                        },
+                        {
+                            "label": "Không (No)",
+                            "value": "no"
+                        },
+                        {
+                            "label": "Không biết (Don't know)",
+                            "value": "don't_know"
+                        }
+                    ]
+                },
+                {
+                    "key": "triggerInsectBite",
+                    "label": "Côn trùng đốt (Insect bite)",
+                    "type": "choice",
+                    "options": [
+                        {
+                            "label": "Có (Yes)",
+                            "value": "yes"
+                        },
+                        {
+                            "label": "Không (No)",
+                            "value": "no"
+                        },
+                        {
+                            "label": "Không biết (Don't know)",
+                            "value": "don't_know"
+                        }
+                    ]
+                },
+                {
+                    "key": "triggerOther",
+                    "label": "Khác (Other)",
+                    "type": "textarea"
+                }
+            ]
+        },
+        {
+            "section_title": "Tiền sử bản thân (Personal history)",
+            "fields": [
+                {
+                    "key": "personalAllergyHistory",
+                    "label": "Tiền sử dị ứng (Allergy history)",
+                    "type": "choice",
+                    "options": [
+                        {
+                            "label": "Có (Yes)",
+                            "value": "yes"
+                        },
+                        {
+                            "label": "Không (No)",
+                            "value": "no"
+                        },
+                        {
+                            "label": "Không biết (Don't know)",
+                            "value": "don't_know"
+                        }
+                    ]
+                },
+                {
+                    "key": "personalDrugHistory",
+                    "label": "Thuốc (Medication)",
+                    "type": "choice",
+                    "options": [
+                        {
+                            "label": "Có (Yes)",
+                            "value": "yes"
+                        },
+                        {
+                            "label": "Không (No)",
+                            "value": "no"
+                        },
+                        {
+                            "label": "Không biết (Don't know)",
+                            "value": "don't_know"
+                        }
+                    ]
+                },
+                {
+                    "key": "personalUrticariaHistory",
+                    "label": "Mày đay (Urticaria)",
+                    "type": "choice",
+                    "options": [
+                        {
+                            "label": "Có (Yes)",
+                            "value": "yes"
+                        },
+                        {
+                            "label": "Không (No)",
+                            "value": "no"
+                        },
+                        {
+                            "label": "Không biết (Don't know)",
+                            "value": "don't_know"
+                        }
+                    ]
+                },
+                {
+                    "key": "personalOtherHistory",
+                    "label": "Khác (Other)",
+                    "type": "textarea"
+                }
+            ]
+        },
+        {
+            "section_title": "KHÁM THỰC THỂ (PHYSICAL EXAMINATION)",
+            "fields": [
+                {
+                    "key": "fever",
+                    "label": "Sốt (Fever)",
+                    "type": "choice",
+                    "options": [
+                        {
+                            "label": "Có (Yes)",
+                            "value": "yes"
+                        },
+                        {
+                            "label": "Không (No)",
+                            "value": "no"
+                        }
+                    ]
+                },
+                {
+                    "key": "feverTemperature",
+                    "label": "... độ C (... degrees C)",
+                    "type": "number",
+                    "visibleIf": {
+                        "field": "fever",
+                        "value": "yes"
+                    }
+                },
+                {
+                    "key": "pulseRate",
+                    "label": "Mạch (Pulse)",
+                    "type": "text"
+                },
+                {
+                    "key": "bloodPressure",
+                    "label": "HA (Blood Pressure)",
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "section_title": "KẾT QUẢ TEST CẬN LÂM SÀNG (LABORATORY TEST RESULTS)",
+            "fields": [
+                {
+                    "key": "lab_tests",
+                    "label": "Lab Tests",
+                    "type": "table",
+                    "columns": [
+                        {
+                            "label": "Chỉ số (Index)",
+                            "key": "index"
+                        },
+                        {
+                            "label": "Kết quả (Result)",
+                            "key": "result"
+                        },
+                        {
+                            "label": "Đơn vị (Unit)",
+                            "key": "unit"
+                        }
+                    ],
+                    "rows": [
+                        {
+                            "index": "WBC",
+                            "unit": "G/L"
+                        },
+                        {
+                            "index": "NEU",
+                            "unit": "G/L"
+                        },
+                        {
+                            "index": "CRP",
+                            "unit": "mg/L"
+                        },
+                        {
+                            "index": "IgE toàn phần (Total IgE)",
+                            "unit": "Ku/L"
+                        }
+                    ]
+                },
+                {
+                    "key": "otherLabTests",
+                    "label": "Xét nghiệm khác (Other tests)",
+                    "type": "textarea"
+                }
+            ]
+        },
+        {
+            "section_title": "ĐIỀU TRỊ (TREATMENT)",
+            "fields": [
+                {
+                    "key": "antihistamineH1",
+                    "label": "Thuốc kháng histamin H1 (H1 antihistamine)",
+                    "type": "group",
+                    "fields": [
+                        {
+                            "key": "medication_name_1",
+                            "label": "Tên thuốc... Liều dùng... (Medication name... Dosage...)",
+                            "type": "textarea"
+                        },
+                        {
+                            "key": "medication_name_2",
+                            "label": "Tên thuốc... Liều dùng... (Medication name... Dosage...)",
+                            "type": "textarea"
+                        }
+                    ]
+                },
+                {
+                    "key": "corticosteroidSystemic",
+                    "label": "Corticoid toàn thân (Systemic corticosteroid)",
+                    "type": "group",
+                    "fields": [
+                        {
+                            "key": "medication_name",
+                            "label": "Tên thuốc... Liều dùng... (Medication name... Dosage...)",
+                            "type": "textarea"
+                        }
+                    ]
+                },
+                {
+                    "key": "hospitalization",
+                    "label": "Nhập viện (Hospitalization)",
+                    "type": "choice",
+                    "options": [
+                        {
+                            "label": "Có (Yes)",
+                            "value": "yes"
+                        },
+                        {
+                            "label": "Không (No)",
+                            "value": "no"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "section_title": "HẸN KHÁM LẠI (FOLLOW-UP APPOINTMENT)",
+            "fields": [
+                {
+                    "key": "followUpDate",
+                    "label": "HẸN KHÁM LẠI (Follow-up appointment)",
+                    "type": "text"
+                }
+            ]
+        }
+    ]
+}
