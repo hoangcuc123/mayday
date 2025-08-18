@@ -1,0 +1,95 @@
+{
+    "personalInfo": {
+        "fullName": "Nguyen Van Dat",
+        "nationalId": "987654321",
+        "age": "25",
+        "gender": 1,
+        "phoneNumber": "0123456789",
+        "addressArea": "Nông thôn",
+        "occupation": "Công nhân",
+        "exposureHistory": "Tiếp xúc hóa chất",
+        "recordOpenDate": "2025-08-10",
+        "examinationDate": "2025-08-18"
+    },
+    "generalInfo": {
+        "continuousOutbreak6Weeks": false,
+        "rashOrAngioedema": "Sẩn phù",
+        "firstOutbreakSinceWeeks": 1,
+        "outbreakStartMonthYear": "08/2025",
+        "outbreakEndMonthYear": "08/2025",
+        "treatmentReceived": true,
+        "drugResponse": "Khỏi hoàn toàn",
+        "drugResponseSymptom": "Không có",
+        "currentOutbreakStart": "2025-08-17T00:00:00Z",
+        "currentOutbreakEnd": "2025-08-17T12:00:00Z",
+        "drugName": "Fexofenadine 180mg",
+        "drugDuration": "3 ngày",
+        "drugDosage": "1 viên/ngày"
+    },
+    "rash": {
+        "rashAppearanceTime": "Ngẫu nhiên",
+        "rashTriggerFactors": "Không có",
+        "rashWorseningFactors": "Thức ăn",
+        "rashFoodTriggerDetail": "Hải sản",
+        "rashDrugTriggerDetail": "Không có",
+        "rashLocation": "Miệng",
+        "rashPhotoUpload": "http://example.com/rash_photo.jpg",
+        "rashSizeOnTreatment": "10-50mm",
+        "rashSizeNoTreatment": "10-50mm",
+        "rashBorder": "Không bờ",
+        "rashShape": "Dài",
+        "rashColor": "Đỏ hồng",
+        "rashDurationOnTreatment": "1h-6h",
+        "rashDurationNoTreatment": "Không biết",
+        "rashSurface": "Có vảy, Không mụn nước",
+        "rashTimeOfDay": "Tối",
+        "rashCountPerDay": "0-20",
+        "rashSensation": "Ngứa"
+    },
+    "angioedema": {
+        "angioedemaCount": 0,
+        "angioedemaLocation": "Không có",
+        "angioedemaPhotoUpload": "Không có",
+        "angioedemaSurface": "Không có",
+        "angioedemaDurationOnTreatment": "Không có",
+        "angioedemaDurationNoTreatment": "Không có",
+        "angioedemaTimeOfDay": "Không có",
+        "angioedemaSensation": "Không có"
+    },
+    "triggersAndHistory": {
+        "triggerInfection": "Không",
+        "triggerFood": "Có",
+        "triggerDrug": "Không",
+        "triggerInsectBite": "Không",
+        "triggerOther": "Không",
+        "personalAllergyHistory": "Dị ứng phấn hoa",
+        "personalDrugHistory": "Không có",
+        "personalUrticariaHistory": "Không có",
+        "personalOtherHistory": "Viêm xoang"
+    },
+    "physicalExam": {
+        "fever": false,
+        "feverTemperature": 0,
+        "pulseRate": 80,
+        "bloodPressure": 120
+    },
+    "diagnosisAndLab": {
+        "preliminaryDiagnosis": [
+            "Mày đay cấp tính"
+        ],
+        "wbc": 7.5,
+        "neu": 4.2,
+        "crp": 2.1,
+        "totalIgE": 150.0,
+        "otherLabTests": "Không có",
+        "finalDiagnosis": [
+            "Mày đay cấp tính do dị ứng thức ăn"
+        ]
+    },
+    "treatment": {
+        "antihistamineH1": "Cetirizin 10mg",
+        "corticosteroidSystemic": "Không có",
+        "hospitalization": false,
+        "followUpDate": "2025-08-25"
+    }
+}
